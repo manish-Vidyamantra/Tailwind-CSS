@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a7c9156184.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<body class="bg-teal-200 w-screen h-screen flex items-center dark:bg-gray-600 justify-around">
+
+  
+
+<div class="container w-1/3 h-4/5 bg-teal-500  rounded-2xl flex flex-col dark:bg-gray-800">
+
+  <label class="relative inline-flex items-center cursor-pointer mb-10">
+    <input type="checkbox" value="off" class="toggle sr-only peer">
+    <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue- rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+    <span class="ml-3 darkText text-sm font-medium text-gray-900 dark:text-gray-300">Dark</span>
+  </label>
+
+  <div class="header mb-10 mt-20 flex justify-center font-bold text-white text-4xl">
+    <h1>USER LOGIN</h1>
+    <div class=""></div>
+  </div>
+
+  <div class="flex flex-col h-1/2 w-full">
+
+    <div class="username w-full flex justify-around my-5">
+      <i class="fa-solid fa-user text-white text-6xl"></i>
+      <input type="text" class= "text-xl w-1/2 border rounded-lg" placeholder="Username">
+    </div>
+
+    <div class="password w-full flex justify-around my-5">
+      <i class="fa-solid fa-lock text-white text-6xl"></i>
+      <input type="text" class= "text-xl w-1/2 border rounded-lg" placeholder="Password">
+   </div>
+
+    <div class="login w-full flex justify-around my-5">
+      <i class="fa-solid fa-right-to-bracket text-white text-6xl"></i>
+       <button class= "text-xl w-1/2 border rounded-lg bg-white">LOGIN</button>
+    </div>
+
+    <div class="bottom flex justify-center mt-14">
+      <p class="text-xl cursor-pointer text-teal-900 dark:text-white">Forgot Password?</p>
+    </div>
+  </div>
+</div>
+
+<div class="container w-1/2 h-4/5 bg-teal-500  rounded-2xl flex items-center justify-around dark:bg-gray-800">
+
+  <div class="container w-1/3  bg-red-50 p-1 rounded-2xl flex flex-col dark:bg-black dark:text-white line-clamp-4">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est id architecto velit quos harum reiciendis debitis doloremque, deleniti animi iusto, sunt placeat optio vel aliquid cupiditate obcaecati non dicta corporis repellendus excepturi! Ea officia accusamus cum unde molestias fuga mollitia fugiat nam vero quibusdam et natus, aliquid nihil enim nobis.
+  </div>
+  <div class="container w-1/3  bg-red-50 p-1 rounded-2xl flex flex-col  dark:bg-black dark:text-white line-clamp-4">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora fuga aspernatur laboriosam, expedita magni eveniet veritatis doloribus nam suscipit, explicabo amet? Rerum reiciendis delectus neque deleniti voluptatibus autem blanditiis atque, architecto possimus! Natus neque quaerat fuga explicabo mollitia accusamus, nobis fugiat expedita eum repellendus! Commodi quia iste fugit ea enim.
+  </div>
+
+</div>
+
+</body>
+<script>
+  let htmlElement = document.querySelector("html");
+  let toggleElement = document.querySelector(".toggle");
+  let textElement = document.querySelector(".darkText");
+  
+
+  toggleElement.addEventListener('click', (e) => {
+    if(toggleElement.value == 'off') {
+      toggleElement.value = 'on';
+      textElement.innerText = "Normal";
+      htmlElement.classList.add("dark");
+    } else {
+      htmlElement.classList.remove("dark");
+      toggleElement.value = 'off';
+      textElement.innerText = "Dark";
+    }
+  });
+</script>
+
+</html>
