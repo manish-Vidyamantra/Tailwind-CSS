@@ -5,7 +5,14 @@ module.exports = {
   darkMode: "class",
 
   theme: {
+
     extend: {
+
+      screens: {
+        'xsm': '200px',
+        'xmd': '800px'
+      },
+
       spacing: {
         13: "3.25rem",
         15: "3.75rem",
